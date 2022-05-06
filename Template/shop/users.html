@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table cellspacing="2px" cellpadding="10px">
+        <tr>
+            <td>User No.</td>
+            <td>Username</td>
+            <td>Userpass</td>
+            <td>useremail</td>
+            <td>usermob</td>
+        </tr>
+        {% for i in users %}
+        <tr>
+            <td>{{i.uno}}</td>
+            <td>{{i.uname}}</td>
+            <td>{{i.upass}}</td>
+            <td>{{i.uemail}}</td>
+            <td>{{i.umob}}</td>
+            <td>{{i.id}}</td>
+            <td><a href="http://localhost:8000/delete?id={{i.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+        <tr>
+           <h3><td><a href="http://localhost:8000/login">Login</a></td></h3>
+        </tr>
+    </table>
+</body>
+</html>
